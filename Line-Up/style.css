@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(img/2.jpg);
+    font-family: 'Crimson Text', serif;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 90%;
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+    gap: 10px;
+    overflow: hidden;
+    align-items: center;
+}
+
+/*nav*/
+
+header{
+    width: 100%;
+    height: 100wh;
+    background-color: black;
+}
+
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 140px;
+    margin-left: 20px;
+}
+
+.bar-btn{
+    font-size: 25px;
+    color: white;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+.nav-menu{
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    transition: all .5s;
+}
+
+.nav-menu li{
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.nav-menu li a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.nav-menu li a.active, .nav-menu li a:hover{
+    color: red;
+    transition: .3s;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ .nav-menu{
+    height: 100vh;
+}
+
+#check:checked ~ .nav-menu li{
+    display: block;
+}
+
+
+
+.line-up{
+    margin: 1rem;
+    padding: 10px;
+    grid-column: 1/12;
+    align-items: center;
+}
+
+/*Cuenta*/
+
+.container{
+    max-width: 900px;
+    margin:60px auto;
+}
+.container h1,
+.container p{
+    color:#fff;
+    text-align: center;
+    padding: 20px 0;
+}
+.container h1{
+    font-size: 4em;
+}
+.container p{
+    font-size: 2em;
+}
+.center-abs{
+    top:40%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    position: absolute;
+}
+.charts{
+    display: flex;
+}
+.chart{
+    position: relative;
+    width:25%;
+    height: 260px;
+}
+.chart h3{
+    color:#fff;
+    font-size: 1.8em;
+    position: absolute;
+    bottom:10px;
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 1px 10px #000;
+}
+.chart svg{
+    z-index: 2;
+}
+/* DIV CIRCULO DE FONDO */
+.circle{
+    width: 150px;
+    height:150px;
+    border-radius: 50%;
+    z-index:1;
+    border:10px #f2f2f2 solid;
+}
+.text{
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+    font-size: 3.8em;
+    font-weight: 700;
+    color:#680a0a
+}
+/* SVG CIRCULO */
+.outer{
+    fill:transparent;
+    stroke: #680a0a;
+    stroke-width: 10; 
+    stroke-dasharray: 439; /* se usa el mismo valor en el script.js */
+    transform: rotate(270deg) translate(-150px, 0); 
+}
+
+/*footer*/
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  
+  [class^="footer-item"] a{
+    color: white;
+    font-size: 25px;
+  }
+  
+  [class^="footer-item"]{
+    grid-column: span 3;
+  }
