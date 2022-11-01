@@ -6,7 +6,7 @@
 
 body{
     background-image: url(IMG\2.jpg); /*¿Por que no funciona ahora? :'( */
-    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    background-color: black
     font-family: 'Crimson Text', serif;
 }
 
